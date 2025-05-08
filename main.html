@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .vert{
+            display: flex;
+        }
+        .numero{
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+        }
+        #resultado{
+            width: 100%;
+            height: 50px;
+            border-style: solid;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #main{
+            width: 170px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="resultado">
+            <h1 id="valor1"></h1>
+            <h1 id="op"></h1>
+            <h1 id="valor2"></h1>
+            <h1 id="total"></h1>
+        </div>
+        <table class="box">
+            <tr class="vert">
+                <th class="numero" data-value="1">1</th>
+                <th class="numero" data-value="2">2</th>
+                <th class="numero" data-value="3">3</th>
+            </tr>
+            <tr class="vert">
+                <th class="numero" data-value="4">4</th>
+                <th class="numero" data-value="5">5</th>
+                <th class="numero" data-value="6">6</th>
+            </tr>
+            <tr class="vert">
+                <th class="numero" data-value="7">7</th>
+                <th class="numero" data-value="8">8</th>
+                <th class="numero" data-value="9">9</th>
+            </tr>
+            <tr class="vert">
+                <th class="numero" data-value="0">0</th>
+                <th class="numero" data-value="+">+</th>
+                <th class="numero" data-value="-">-</th>
+            </tr>
+            <tr class="vert">
+                <th class="numero" data-value="/">/</th>
+                <th class="numero" data-value="x">x</th>
+                <th class="numero" onclick="calcular()" data-value="=">=</th>
+                <th class="numero" data-value="del" style="background-color: red;">Clear</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
