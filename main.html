@@ -8,6 +8,16 @@
         .vert{
             display: flex;
         }
+        .igual{
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+        }
+        .op{
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+        }
         .numero{
             width: 50px;
             height: 50px;
@@ -21,20 +31,22 @@
             text-align: center;
             justify-content: center;
             align-items: center;
-            
         }
         #main{
             width: 170px;
+            margin-left: 650px;
+            margin-top: 200px;
+        }
+        .del{
+            width: 50px;
+            height: 50px;
+            border-style: solid;
         }
     </style>
 </head>
 <body>
     <div id="main">
-        <div id="resultado">
-            <h1 id="valor1"></h1>
-            <h1 id="op"></h1>
-            <h1 id="valor2"></h1>
-            <h1 id="total"></h1>
+        <div id="resultado" style="font-size: 30px;">
         </div>
         <table class="box">
             <tr class="vert">
@@ -54,14 +66,14 @@
             </tr>
             <tr class="vert">
                 <th class="numero" data-value="0">0</th>
-                <th class="numero" data-value="+">+</th>
-                <th class="numero" data-value="-">-</th>
+                <th class="op" data-value="+">+</th>
+                <th class="op" data-value="-">-</th>
             </tr>
             <tr class="vert">
-                <th class="numero" data-value="/">/</th>
-                <th class="numero" data-value="x">x</th>
-                <th class="numero" onclick="calcular()" data-value="=">=</th>
-                <th class="numero" data-value="del" style="background-color: red;">Clear</th>
+                <th class="op" data-value="/">/</th>
+                <th class="op" data-value="x">x</th>
+                <th class="igual" onclick="calcular()" data-value="=">=</th>
+                <th class="del" onclick="del()" style="background-color: red;">Clear</th>
             </tr>
         </table>
     </div>
